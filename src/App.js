@@ -30,11 +30,11 @@ class App extends React.Component {
               id: snapShot.id,
               ...snapShot.data()
           });
-          console.log(this.state)
         })
       }
       setCurrentUser({userAuth});
     })
+    
   }
 
   componentWillUnmount(){
@@ -62,7 +62,7 @@ class App extends React.Component {
   }
 }
 
-const mapStateToprops = ({ user }) => ({
+const mapStateToProps = ({ user }) => ({
   currentUser: user.currentUser
 })
 
@@ -72,6 +72,6 @@ const mapDispatchToProps = dispatch => ({
 
 
 export default connect(
-  mapStateToprops,
+  mapStateToProps,
   mapDispatchToProps 
 )(App);

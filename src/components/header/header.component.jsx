@@ -3,13 +3,14 @@ import { Link } from 'react-router-dom'
 import {connect } from 'react-redux'
 
 import { auth } from '../../firebase/firebase.utils.js'
+import CartIcon from '../cart-icon/cart-icon.component'
 
 import { ReactComponent as Logo} from "../../assets/crown.svg"
 import "./header.styles.scss"
 
 
 
-function Header({ currentUser}) {
+function Header({ currentUser, hidden}) {
   return (
     <div className="header">
       <Link className="logo-container" to="/">
@@ -30,6 +31,8 @@ function Header({ currentUser}) {
               SIGN IN
             </Link>
             )}
+
+          <CartIcon />
 
       </div>
     </div>

@@ -25,7 +25,7 @@ class SignUp extends React.Component {
 
         if(password !== confirmPassword){
             alert("passwords don't match");
-            return
+            return;
         }
 
         try {
